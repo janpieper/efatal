@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(195, 203, 223);
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+    margin: 0px;
+}
+
+body, table {
+    font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+#navigation {
+    background-color: rgb(23, 23, 23);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#navigation ul {
+    padding: 20px 5px;
+    text-align: center;
+}
+
+#navigation ul li {
+    display: inline;
+}
+
+#navigation ul li a {
+    padding: 5px 10px;
+    margin: 0px 5px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(95, 95, 95);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#navigation ul li.active a, #navigation ul li a:hover {
+    background-color: rgb(35, 107, 143);
+}
+
+#content {
+    padding: 68px 10px 45px 10px;
+}
+
+#errors .error {
+    
+}
+
+#footer {
+    background-color: rgb(23, 23, 23);
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 10px 20px;
+}
+
+#footer p {
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+
+#footer a {
+    color: rgb(35, 107, 143);
+    text-decoration: none;
+}
+
+#footer p.built {
+    float: left;
+}
+
+#footer p.sources {
+    float: right;
+}
+
+#errors .error:hover {
+    background-color: rgb(225, 225, 225);
+    border: 1px solid rgb(150, 150, 150);
+}
+
+#errors .error {
+    background-color: rgb(255, 255, 255);
+    font-size: 80%;
+    width: 100%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#errors .error {
+    margin-bottom: 5px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+#errors .error tbody tr th,
+#errors .error tbody tr td {
+    padding: 2px 0px;
+}
+
+#errors .error tbody tr th {
+    width: 125px;
+    text-align: right;
+    padding-right: 10px;
+}

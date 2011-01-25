@@ -1,0 +1,4 @@
+{
+    "name" : "efatal",
+    "description" : "Small error viewer built on CouchDB"
+}
