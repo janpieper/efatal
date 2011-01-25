@@ -1,6 +1,13 @@
 (function($) {
     $.application = $.application || {};
     $.extend($.application, {
+        init: function() {
+            $.couch.app(function(app) {
+                $("#navigation").evently("navigation", app);
+                $$("#errors").date = $.date.format(new Date, "yyyy-mm-dd", false);
+                $$("#errors").app = app;
+            });
+        },
         entry: function(doc) {
             return $("<table>").attr({
                 "id": "doc_" + doc._id,
