@@ -1,6 +1,7 @@
 function() {
     $("#dates li a").click(function() {
-        var parts = $(this).attr("href").substr(1).split("-");
+        var dateKey = $(this).attr("href").substr(1);
+        var parts = dateKey.split("-");
         $("#dates li.active").first().removeClass("active");
         $(this).parent().addClass("active");
         $.couch.db("efatal").view("efatal/recent-errors", {
