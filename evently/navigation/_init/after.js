@@ -17,7 +17,7 @@ function() {
             }
         });
         var container = $("#errors");
-        if ($.date.format(new Date, "yyyy-mm-dd") == dateKey) {
+        if ($.date.format(new Date, "yyyy-mm-dd", false) == dateKey) {
             container.evently("errors", $$("#errors").app);
         } else {
             container.unbind();
