@@ -57,7 +57,7 @@
                         $("<th>").attr("class", "date").text("Date:")
                     ).append(
                         $("<td>").attr("class", "date").text(
-                            $.date.format(doc.date, "yyyy-mm-dd HH:MM:ss")
+                            $.date.format(doc.date, "HH:MM:ss")
                         )
                     )
                 ).append(
