@@ -2,6 +2,7 @@ function() {
     $("#dates li a").click(function() {
         var dateKey = $(this).attr("href").substr(1);
         $("#dates li.active").first().removeClass("active");
+        $(this).parent().addClass("active");
         $.couch.db("efatal").view("efatal/recent-errors", {
             key: dateKey,
             descending: true,
@@ -15,6 +16,11 @@ function() {
                 }
             }
         });
-        $(this).parent().addClass("active");
-    });
+        var container = $("#errors");
+        if ($.date.format(new Date, "yyyy-mm-dd") == dateKey) {
+            container.evently("errors", $$("#errors").app);
+        } else {
+            container.unbind();
+        }
+    }).first().click();
 }
