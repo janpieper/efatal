@@ -3,21 +3,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>efatal :: Log Viewer</title>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.dump.js"></script>
-        <script type="text/javascript" src="js/jquery.couch.js"></script>
-        <script type="text/javascript" src="js/jquery.date.js"></script>
-        <script type="text/javascript" src="js/jquery.dump.js"></script>
-        <script type="text/javascript" src="js/jquery.application.js"></script>
-        <script type="text/javascript" src="vendor/couchapp/jquery.couch.app.js"></script>
-        <script type="text/javascript" src="vendor/couchapp/jquery.couch.app.util.js"></script>
+        <script type="text/javascript" src="js/loader.js"></script>
         <link rel="stylesheet" type="text/css" href="css/default.css" />
     </head>
     <body>
         <div id="page">
-            <div id="navigation">
-                <ul id="dates"></ul>
-            </div>
+            <div id="navigation"></div>
             <div id="content">
                 <div id="errors"></div>
             </div>
@@ -27,7 +18,11 @@
             </div>
         </div>
         <script type="text/javascript">
-            $.application.run();
+            $.couch.app(function(app) {
+                $("#navigation").evently("navigation", app);
+                $$("#errors").date = $.date.format(new Date, "yyyy-mm-dd");
+                $("#errors").evently("errors", app);
+            });
         </script>
     </body>
 </html>

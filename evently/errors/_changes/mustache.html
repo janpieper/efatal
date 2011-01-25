@@ -1,0 +1,22 @@
+{{#errors}}
+    <table class="error" id="doc_{{id}}">
+        <tbody>
+            <tr>
+                <th class="date">Date:</th>
+                <td class="date">{{date}}</td>
+            </tr>
+            <tr>
+                <th class="type">Type:</th>
+                <td class="type">{{type}}</td>
+            </tr>
+            <tr>
+                <th class="file">File & Line:</th>
+                <td class="file">{{file}} @ {{line}}</td>
+            </tr>
+            <tr>
+                <th class="message">Message:</th>
+                <td class="message">{{message}}</td>
+            </tr>
+        </tbody>
+    </table>
+{{/errors}}

@@ -1,0 +1,6 @@
+{
+    "view": "errors-by-date",
+    "descending": true,
+    "group_level": 2,
+    "limit": 7
+}
