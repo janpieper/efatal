@@ -24,5 +24,17 @@ function() {
         } else {
             container.unbind();
         }
-    }).first().click();
+    });
+    var navItems = null;
+    if (location.href.indexOf("#") != -1) {
+        var navItems = $("#dates li a[href*='" + window.location.hash + "']");
+    }
+    if ((navItems === null) || (navItems.length == 0)) {
+        navItems = $("#dates li a");
+    }
+    if (navItems.length > 0) {
+        var navItem = navItems.first();
+        window.location.hash = navItem.attr("href");
+        navItem.click();
+    }
 }
