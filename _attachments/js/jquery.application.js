@@ -2,11 +2,16 @@
     $.application = $.application || {};
     $.extend($.application, {
         init: function() {
+            var opts = {ddoc: "efatal"};
+            if (document.location.pathname.indexOf("_design") == -1) {
+                opts.db = "efatal";
+                opts.design = "efatal";
+            }
             $.couch.app(function(app) {
                 $("#navigation").evently("navigation", app);
                 $$("#errors").date = $.date.format(new Date, "yyyy-mm-dd", false);
                 $$("#errors").app = app;
-            });
+            }, opts);
         },
         entry: function(doc) {
             return $("<table>").attr({
