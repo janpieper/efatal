@@ -4,7 +4,15 @@
         "to"   : "index.html"
     },
     {
-        "from" : "*",
-        "to"   : "*"
+        "from" : "js/*",
+        "to"   : "js/*"
+    },
+    {
+        "from" : "vendor/*",
+        "to"   : "vendor/*"
+    },
+    {
+        "from" : ":db/*",
+        "to"   : "../../*"
     }
 ]
