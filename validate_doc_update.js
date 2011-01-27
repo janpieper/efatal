@@ -20,7 +20,7 @@ function(newDoc, oldDoc, userCtx)
         require(newDoc.line, "Errors must have an 'line' attribute.");
         require(newDoc.message, "Errors must have an 'message' attribute.");
         
-        if (!newDoc.date.match(/\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}\+\d{2}:\d{2}/)) {
+        if (!newDoc.date.match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/)) {
             forbidden("Sorry, '" + newDoc.date + "' is not a valid date format. Try: 2011-01-26T22:37:14+00:00");
         }
         
